@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Subnet Calculator</title>
+  <link rel="stylesheet" type="text/css" href="sc.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Subnet Calculator</h1>
+    <video autoplay muted loop id="myVideo">
+      <source src="sample.mp4" type="video/mp4">
+    </video>
+
+    <form id="subnet-form">
+      <label for="ip-address">IP Address:</label>
+      <input type="text" id="ip-address" placeholder="Enter IP Address" required>
+
+      <label for="subnet-mask">Subnet Mask:</label>
+      <input type="text" id="subnet-mask" placeholder="Enter Subnet Mask" required>
+
+      <p>Select Calculation Type:</p>
+      <input type="checkbox" id="classful-checkbox" checked>
+      <label for="classful-checkbox">Classful Subnetting</label>
+
+      <input type="checkbox" id="classless-checkbox" checked>
+      <label for="classless-checkbox">Classless Subnetting</label>
+
+      <button type="submit">Calculate</button>
+    </form>
+
+    <div id="results" class="hidden">
+      <h2>Results</h2>
+      <div id="classful-results" class="hidden">
+        <h3>Classful Subnetting</h3>
+        <p id="classful-network-address"></p>
+        <p id="classful-subnet-mask"></p>
+        <p id="classful-subnet-mask-class"></p> <!-- New subnet mask class display -->
+        <p id="classful-subnet-size"></p>
+        <p id="classful-usable-hosts"></p>
+        <p id="classful-broadcast-address"></p>
+        <p id="classful-ip-range"></p>
+      </div>
+      <div id="classless-results" class="hidden">
+        <h3>Classless Subnetting</h3>
+        <p id="classless-network-address"></p>
+        <p id="classless-subnet-mask-binary"></p>
+        <p id="classless-subnet-size"></p>
+        <p id="classless-usable-hosts"></p>
+        <p id="classless-broadcast-address"></p>
+        <p id="classless-ip-range"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="usc.js"></script>
+</body>
+</html>
