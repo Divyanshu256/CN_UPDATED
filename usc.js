@@ -13,6 +13,7 @@ function calculateClassfulSubnet(ipAddress) {
       usableHosts = Math.pow(2, 24) - 2;
       broadcastAddress = `${octets[0]}.255.255.255`;
       ipRange = `${octets[0]}.0.0.1 - ${octets[0]}.255.255.254`;
+      window.print("Class A");
     } else if (firstOctet >= 128 && firstOctet <= 191) {
       // Class B subnetting
       networkAddress = `${octets[0]}.${octets[1]}.0.0`;
@@ -45,7 +46,7 @@ function calculateClassfulSubnet(ipAddress) {
       subnetSize,
       usableHosts,
       broadcastAddress,
-      //subnetClass: getSubnetClass(ipAddress),
+      subnetClass: getSubnetClass(ipAddress),
       ipRange
     };
   }
