@@ -45,7 +45,7 @@ function calculateClassfulSubnet(ipAddress) {
       subnetSize,
       usableHosts,
       broadcastAddress,
-      subnetClass: getSubnetClass(ipAddress),
+      //subnetClass: getSubnetClass(ipAddress),
       ipRange
     };
   }
