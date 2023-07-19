@@ -92,7 +92,7 @@ function calculateClassfulSubnet(ipAddress) {
     return {
       networkAddress,
       subnetMaskBinary,
-      
+      subnetClass
       usableHosts,
       broadcastAddress,
       ipRange
