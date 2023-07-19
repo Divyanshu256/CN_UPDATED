@@ -239,7 +239,7 @@ function getSubnetClass(ipAddress) {
       classfulResultsElement.classList.remove("hidden");
       document.getElementById("classful-network-address").textContent = `Network Address: ${classfulResults.networkAddress}`;
       document.getElementById("classful-subnet-mask").textContent = `Subnet Mask: ${classfulResults.subnetMask}`;
-      //document.getElementById("classful-subnet-size").textContent = `Subnet Size: /${classfulResults.subnetSize}`;
+      document.getElementById("classful-subnet-size").textContent = `Subnet Size: /${classfulResults.subnetSize}`;
       document.getElementById("classful-usable-hosts").textContent = `Usable Hosts: ${classfulResults.usableHosts}`;
       document.getElementById("classful-broadcast-address").textContent = `Broadcast Address: ${classfulResults.broadcastAddress}`;
       document.getElementById("classful-ip-range").textContent = `IP Range: ${classfulResults.ipRange}`;
