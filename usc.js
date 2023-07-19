@@ -13,7 +13,11 @@ function calculateClassfulSubnet(ipAddress) {
       usableHosts = Math.pow(2, 24) - 2;
       broadcastAddress = `${octets[0]}.255.255.255`;
       ipRange = `${octets[0]}.0.0.1 - ${octets[0]}.255.255.254`;
+<<<<<<< HEAD
       document.getElementById("classful-subnet-mask-class").textContent ="class A";
+=======
+       document.getElementById("classful-subnet-mask-class").textContent ="class A";
+>>>>>>> 0430b1449179c5f2dfc156c1bdaeb5ca58dc67f0
     } else if (firstOctet >= 128 && firstOctet <= 191) {
       // Class B subnetting
       networkAddress = `${octets[0]}.${octets[1]}.0.0`;
@@ -46,7 +50,7 @@ function calculateClassfulSubnet(ipAddress) {
       subnetSize,
       usableHosts,
       broadcastAddress,
-      subnetClass: getSubnetClass(ipAddress),
+      subnetClassMask,
       ipRange
     };
   }
@@ -92,8 +96,8 @@ function calculateClassfulSubnet(ipAddress) {
     return {
       networkAddress,
       subnetMaskBinary,
-      subnetSize,
-      usableHosts,
+      subnetClass
+      usableHost,
       broadcastAddress,
       ipRange
     };
@@ -244,7 +248,7 @@ function getSubnetClass(ipAddress) {
       document.getElementById("classful-broadcast-address").textContent = `Broadcast Address: ${classfulResults.broadcastAddress}`;
       document.getElementById("classful-ip-range").textContent = `IP Range: ${classfulResults.ipRange}`;
       document.getElementById("classful-subnet-mask").textContent = `Subnet Mask: ${classfulResults.subnetMask}`;
-      document.getElementById("classful-subnet-mask-class").textContent = `Subnet Mask Class: ${classfulResults.subnetMaskClass}`; // Display subnet mask class
+      document.getElementById("classful-subnet-mask-class").textContent = `Subnet Mask Class: ${classfulResults.subnetClassMask}`; // Display subnet mask class
     } else {
       classfulResultsElement.classList.add("hidden");
     }
