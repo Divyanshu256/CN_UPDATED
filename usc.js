@@ -244,7 +244,7 @@ function getSubnetClass(ipAddress) {
       document.getElementById("classful-broadcast-address").textContent = `Broadcast Address: ${classfulResults.broadcastAddress}`;
       document.getElementById("classful-ip-range").textContent = `IP Range: ${classfulResults.ipRange}`;
       document.getElementById("classful-subnet-mask").textContent = `Subnet Mask: ${classfulResults.subnetMask}`;
-      document.getElementById("classful-subnet-mask-class").textContent = `Subnet Mask Class: ${classfulResults.subnetMaskClass}`; // Display subnet mask class
+      document.getElementById("classful-subnet-mask-class").textContent = `Subnet Mask Class: ${classfulResults.getSubnetClass}`; // Display subnet mask class
     } else {
       classfulResultsElement.classList.add("hidden");
     }
